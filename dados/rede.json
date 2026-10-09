@@ -1,0 +1,21 @@
+{
+  "estacoes": {
+    "Luz_L1": { "nome": "Luz", "linha": "Azul", "cor": "#00539F", "lat": -23.5365, "lng": -46.6352, "acessivel": true },
+    "SaoBento_L1": { "nome": "São Bento", "linha": "Azul", "cor": "#00539F", "lat": -23.5443, "lng": -46.6341, "acessivel": true },
+    "Se_L1": { "nome": "Sé", "linha": "Azul", "cor": "#00539F", "lat": -23.5503, "lng": -46.6339, "acessivel": true },
+    "Se_L3": { "nome": "Sé", "linha": "Vermelha", "cor": "#EE3124", "lat": -23.5503, "lng": -46.6339, "acessivel": true },
+    "Anhangabau_L3": { "nome": "Anhangabaú", "linha": "Vermelha", "cor": "#EE3124", "lat": -23.5478, "lng": -46.6386, "acessivel": true },
+    "Luz_L4": { "nome": "Luz", "linha": "Amarela", "cor": "#FFF000", "lat": -23.5365, "lng": -46.6352, "acessivel": true },
+    "Republica_L4": { "nome": "República", "linha": "Amarela", "cor": "#FFF000", "lat": -23.5440, "lng": -46.6430, "acessivel": true }
+  },
+  "conexoes": [
+    { "origem": "Luz_L1", "destino": "SaoBento_L1", "linha": "Azul", "tempo": 3, "distanciaKm": 1.2 },
+    { "origem": "SaoBento_L1", "destino": "Se_L1", "linha": "Azul", "tempo": 2, "distanciaKm": 0.8 },
+    { "origem": "Anhangabau_L3", "destino": "Se_L3", "linha": "Vermelha", "tempo": 2, "distanciaKm": 0.9 },
+    { "origem": "Luz_L4", "destino": "Republica_L4", "linha": "Amarela", "tempo": 3, "distanciaKm": 1.5 }
+  ],
+  "baldeacoes": [
+    { "estacaoA": "Se_L1", "estacaoB": "Se_L3", "tempo": 4 },
+    { "estacaoA": "Luz_L1", "estacaoB": "Luz_L4", "tempo": 5 }
+  ]
+}

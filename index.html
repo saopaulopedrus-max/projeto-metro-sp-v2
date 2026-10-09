@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metrô São Paulo - Calculador de Rota</title>
+    
+    <!-- CSS do Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body> 
+
+    <div class="container">
+        <h1>Metrô & Trem SP</h1>
+        <p>Selecione as estações para calcular a rota mais rápida:</p>
+
+        <!-- Origem -->
+        <div class="form-group">
+            <label for="origem">Estação de Origem:</label>
+            <select id="origem"> 
+                <option value="">Carregando estações...</option>
+            </select>
+        </div>
+        
+        <!-- Destino -->
+        <div class="form-group">
+            <label for="destino">Estação de Destino:</label>
+            <select id="destino">
+                <option value="">Carregando estações...</option>
+            </select>
+        </div>
+
+        <!-- Modo de Deslocamento -->
+        <div class="form-group">
+            <label for="modo-transporte">Modo de Deslocamento:</label>
+            <select id="modo-transporte">
+                <option value="metro">🚇 Metrô / Trem</option>
+                <option value="carro">🚗 Carro</option>
+                <option value="moto">🏍️ Moto</option>
+                <option value="onibus">🚌 Ônibus</option>
+                <option value="pe">🚶 A pé</option>
+            </select>
+        </div>
+
+        <!-- Acessibilidade -->
+        <div class="form-group-checkbox">
+            <input type="checkbox" id="apenas-acessiveis">
+            <label for="apenas-acessiveis">♿ Apenas rotas 100% acessíveis</label>
+        </div>
+
+        <button id="btn-calcular">Calcular Rota</button>
+
+        <!-- Resultado -->
+        <div id="resultado" class="resultado-box hidden">
+            <h2>Itinerário Recomendado</h2>
+            <div id="tempo-total" class="tempo"></div>
+            <ol id="lista-caminho"></ol>
+        </div>
+    </div>
+
+    <!-- Div para o Mapa -->
+    <div id="map"></div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/grafo.js"></script>
+    <script src="js/dijkstra.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
