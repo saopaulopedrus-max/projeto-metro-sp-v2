@@ -81,5 +81,25 @@ document.getElementById('btn-calcular').addEventListener('click', () => {
     divResultado.classList.remove('hidden');
 });
 
+        const CORES_LINHAS = {
+            "1":"#0153a0",  //linha1- azul 
+            "3":"#ee372f", //linha3- vermelha
+            "5":"#9b3894",  //linha5- lilas
+            "10":"008a99#",   //linha10- turuquesa
+            "11":"#f68369", //linha11-coral
+            "Azul":"#0153a0",
+            "Vermelha":"#ee372f",
+            "Lilás":"#9b3894",
+            "Turquesa":"#008a99",
+            "Coral":"#f68369",
+        };
+
+        //função para obter a cor corresponde
+        function obterCorLinha (linha){
+            return CORES_LINHAS[linha] || "#666666"; //retorna cinza caso nao encontre
+
+        }
+            
+
 // Executa o carregamento inicial
 inicializarApp();

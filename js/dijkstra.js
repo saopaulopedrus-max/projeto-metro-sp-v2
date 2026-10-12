@@ -32,7 +32,7 @@ function calcularRotaDijkstra(grafo, inicio, fim) {
  //relaxamento das arestas (atualização das distâncias dos vizinhos )
         (grafo[noAtual] || []).forEach(vizinho => {
             if (!visitados.has(vizinho.destino)){
-                const novaDistancia < distancias[noAtual] + vizinho.tempo;
+        const x  novaDistancia < distancias[noAtual] + vizinho.tempo;
                 if (novaDistancia < distancias[vizinho.destino]) {
                     distancias[vizinho.destino] = novaDistancia;
                     anteriores[vizinho.destino] = { no: noAtual, tipo: vizinho.tipo}
