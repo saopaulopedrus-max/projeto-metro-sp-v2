@@ -2,39 +2,135 @@ let grafoGlobal = null;
 let mapaLeaflet = null;
 let camadaRota = null;
 
-// Inicializa a aplicação
 async function inicializarApp() {
-    // 1. Inicializa o mapa Leaflet centrado em SP
-    mapaLeaflet = L.map('map').setView([-23.5503, -46.6339], 13);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '© OpenStreetMap'
-    }).addTo(mapaLeaflet);
 
-    // 2. Carrega os dados do Grafo
-    grafoGlobal = await carregarGrafo();
-    if (!grafoGlobal) return;
+    // Inicializa mapa
+    mapaLeaflet = L.map("map").setView(
+        [-23.5503, -46.6339],
+        11
+    );
 
-    const estacoes = Object.keys(grafoGlobal);
-    const selectOrigem = document.getElementById('origem');
-    const selectDestino = document.getElementById('destino');
+    L.tileLayer(
+        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        {
+            maxZoom: 19,
+            attribution: "© OpenStreetMap"
+        }
+    ).addTo(mapaLeaflet);
 
-    selectOrigem.innerHTML = '<option value="">Selecione a Origem</option>';
-    selectDestino.innerHTML = '<option value="">Selecione o Destino</option>';
+    try {
 
-    estacoes.forEach(estacao => {
+        grafoGlobal = await carregarGrafo();
+
+        if (!grafoGlobal) {
+            console.error("Erro ao carregar rede.json");
+            return;
+        }
+
+        const estacoes = Object.keys(grafoGlobal);
+
+        const selectOrigem =
+            document.getElementById("origem");
+
+        const selectDestino =
+            document.getElementById("destino");
+
+        const selectInterditada =
+            document.getElementById(
+                "estacao-interditada"
+            );
+
+        selectOrigem.innerHTML =
+            '<option value="">Selecione a Origem</option>';
+
+        selectDestino.innerHTML =
+            '<option value="">Selecione o Destino</option>';
+
+        if (selectInterditada) {
+            selectInterditada.innerHTML =
+                '<option value="">Nenhuma</option>';
+        }
+
+        estacoes.forEach(estacao => {
+
+            selectOrigem.innerHTML += `
+                <option value="${estacao}">
+                    ${estacao}
+                </option>
+            `;
+
+            selectDestino.innerHTML += `
+                <option value="${estacao}">
+                    ${estacao}
+                </option>
+            `;
+
+            if (selectInterditada) {
+                selectInterditada.innerHTML += `
+                    <option value="${estacao}">
+                        ${estacao}
+                    </option>
+                `;
+            }
+        });
+
+        console.log("Aplicação carregada.");
+
+    } catch (erro) {
+        console.error(
+            "Falha ao inicializar:",
+            erro
+        );
+    }
+}
+
+function obterCorLinha(linha) {
+    return CORES_LINHAS[linha] || "#666666";
+}
+
+inicializarApp();
+;
         selectOrigem.innerHTML += `<option value="${estacao}">${estacao}</option>`;
         selectDestino.innerHTML += `<option value="${estacao}">${estacao}</option>`;
-    });
-}
+;
+
 
 // Escutador do botão Calcular Rota
 document.getElementById('btn-calcular').addEventListener('click', () => {
-    const origem = document.getElementById('origem').value;
-    const destino = document.getElementById('destino').value;
-    const modo = document.getElementById('modo-transporte').value;
-    const apenasAcessivel = document.getElementById('apenas-acessiveis').checked;
 
+    const origem =
+        document.getElementById('origem').value;
+
+    const destino =
+        document.getElementById('destino').value;
+
+    const modo =
+        document.getElementById('modo-transporte').value;
+
+    const selectInterditada =
+    document.getElementById(
+        'estacao-interditada'
+    );
+    
+    const apenasAcessivel =
+        document.getElementById('apenas-acessiveis').checked;
+
+    const horarioPico =
+        document.getElementById('horario-pico').checked;
+
+    const chuva =
+        document.getElementById('chuva').checked;
+const linhasInterditadas = [];
+
+document
+    .querySelectorAll('.linha-interditada:checked')
+    .forEach(item => {
+
+        linhasInterditadas.push(
+            item.value
+        );
+
+    });
     if (!origem || !destino) {
         alert("Por favor, selecione origem e destino!");
         return;
@@ -46,7 +142,26 @@ document.getElementById('btn-calcular').addEventListener('click', () => {
     }
 
     // Executa o algoritmo Dijkstra
-    const resultado = calcularRotaDijkstra(grafoGlobal, origem, destino);
+   let modoTempo = "comum";
+
+if (horarioPico) {
+    modoTempo = "pico";
+}
+
+if (chuva) {
+    modoTempo = "chuva";
+}
+
+const resultado =
+    calcularRotaDijkstra(
+        grafoGlobal,
+        origem,
+        destino,
+        {
+            modoTempo,
+            linhasInterditadas
+        }
+    );
 
     const divResultado = document.getElementById('resultado');
     const divTempo = document.getElementById('tempo-total');
@@ -69,13 +184,81 @@ document.getElementById('btn-calcular').addEventListener('click', () => {
         const fator = multiplicadores[modo] || 1.0;
         const tempoFinal = Math.round(resultado.tempoTotal * fator);
 
-        divTempo.innerText = `⏱️ Tempo total estimado (${modo.toUpperCase()}): ${tempoFinal} minutos`;
+       const totalEstacoes =
+    resultado.caminho.length;
 
-        resultado.caminho.forEach(estacao => {
-            const li = document.createElement('li');
-            li.innerText = estacao;
-            listaCaminho.appendChild(li);
-        });
+const totalBaldeacoes =
+    resultado.caminho.filter(
+        item =>
+            item.tipo &&
+            item.tipo.toLowerCase() === "baldeacao"
+    ).length;
+
+divTempo.innerHTML = `
+⏱️ Tempo total estimado (${modo.toUpperCase()}): ${tempoFinal} minutos <br>
+📍 Estações percorridas: ${totalEstacoes}<br>
+🔄 Baldeações: ${totalBaldeacoes}
+`;
+
+      let ultimaLinha = null;
+
+resultado.caminho.forEach(item => {
+
+    // Mostrar baldeação
+    if (
+        item.tipo &&
+        item.tipo.toLowerCase() === "baldeacao"
+    ) {
+
+        const troca =
+            document.createElement("li");
+
+        troca.innerHTML =
+            "<strong>🔄 BALDEAÇÃO</strong>";
+
+        troca.style.color = "#ff6600";
+
+        troca.style.marginTop = "10px";
+
+        listaCaminho.appendChild(troca);
+    }
+
+    // Mostrar mudança de linha
+    if (
+        item.nomeLinha &&
+        item.nomeLinha !== ultimaLinha
+    ) {
+
+        const cabecalho =
+            document.createElement("li");
+
+        cabecalho.innerHTML =
+            `🚇 <strong>Linha ${item.nomeLinha}</strong>`;
+
+        cabecalho.style.color =
+            item.cor || "#000";
+
+        cabecalho.style.fontWeight =
+            "bold";
+
+        cabecalho.style.marginTop =
+            "8px";
+
+        listaCaminho.appendChild(cabecalho);
+
+        ultimaLinha =
+            item.nomeLinha;
+    }
+
+    const li =
+        document.createElement("li");
+
+    li.textContent =
+        item.estacao;
+
+    listaCaminho.appendChild(li);
+
+});
     }
 
     divResultado.classList.remove('hidden');

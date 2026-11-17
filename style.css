@@ -30,8 +30,9 @@ body, html {
     border-radius: 16px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     max-width: 400px;
-    width: 90%;
+    width: 650%;
     max-height: 90vh;
+    overflow-y: auto;
 
 }   
 
@@ -105,6 +106,8 @@ button:hover {
     background: #f0f4f8;
     border-radius: 8px;
     border-left: 5px solid #0052cc;
+    max-height: 350px;
+    overflow-y: auto;
 }
 
 .tempo {

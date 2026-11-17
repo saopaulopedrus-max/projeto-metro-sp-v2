@@ -1,0 +1,4967 @@
+{
+  "metadados": {
+    "descricao": "Grafo de conexões entre estações das linhas metroferroviárias listadas.",
+    "atualizado_em": "2026-11-13",
+    "linhas_incluidas": [
+      {
+        "numero": 1,
+        "nome": "Azul",
+        "operador": "Metrô",
+        "quantidade_estacoes": 23
+      },
+      {
+        "numero": 2,
+        "nome": "Verde",
+        "operador": "Metrô",
+        "quantidade_estacoes": 14
+      },
+      {
+        "numero": 3,
+        "nome": "Vermelha",
+        "operador": "Metrô",
+        "quantidade_estacoes": 18
+      },
+      {
+        "numero": 4,
+        "nome": "Amarela",
+        "operador": "Metrô",
+        "quantidade_estacoes": 11
+      },
+      {
+        "numero": 5,
+        "nome": "Lilás",
+        "operador": "Metrô",
+        "quantidade_estacoes": 17
+      },
+      {
+        "numero": 6,
+        "nome": "Laranja",
+        "operador": "Metrô",
+        "quantidade_estacoes": 15
+      },
+      {
+        "numero": 7,
+        "nome": "Rubi",
+        "operador": "CPTM",
+        "quantidade_estacoes": 17
+      },
+      {
+        "numero": 8,
+        "nome": "Diamante",
+        "operador": "CPTM",
+        "quantidade_estacoes": 23
+      },
+      {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "operador": "CPTM",
+        "quantidade_estacoes": 21
+      },
+      {
+        "numero": 10,
+        "nome": "Turquesa",
+        "operador": "CPTM",
+        "quantidade_estacoes": 15
+      },
+      {
+        "numero": 11,
+        "nome": "Coral",
+        "operador": "CPTM",
+        "quantidade_estacoes": 17
+      },
+      {
+        "numero": 12,
+        "nome": "Safira",
+        "operador": "CPTM",
+        "quantidade_estacoes": 13
+      },
+      {
+        "numero": 13,
+        "nome": "Jade",
+        "operador": "CPTM",
+        "quantidade_estacoes": 3
+      },
+      {
+        "numero": 15,
+        "nome": "Prata",
+        "operador": "Monotrilho",
+        "quantidade_estacoes": 11
+      },
+      {
+        "numero": 17,
+        "nome": "Ouro",
+        "operador": "Monotrilho",
+        "quantidade_estacoes": 8
+      }
+    ],
+    "observacao": "A Linha 6-Laranja inclui as 15 estações do traçado completo; trechos fora do segmento em operação assistida estão marcados como 'prevista'. Métricas com 'metricas_estimadas: true' são valores ilustrativos e não dados oficiais de operação."
+  },
+  "rede_transporte": [
+    {
+      "origem": "Jabaquara",
+      "destino": "Conceição",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.1,
+        "tempo_comum_min": 2.1,
+        "tempo_pico_min": 2.7,
+        "tempo_chuva_min": 2.3
+      }
+    },
+    {
+      "origem": "Conceição",
+      "destino": "São Judas",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      }
+    },
+    {
+      "origem": "São Judas",
+      "destino": "Saúde",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Saúde",
+      "destino": "Praça da Árvore",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Praça da Árvore",
+      "destino": "Santa Cruz",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.1,
+        "tempo_comum_min": 2.1,
+        "tempo_pico_min": 2.7,
+        "tempo_chuva_min": 2.3
+      }
+    },
+    {
+      "origem": "Santa Cruz",
+      "destino": "Vila Mariana",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.0,
+        "tempo_comum_min": 2.0,
+        "tempo_pico_min": 2.5,
+        "tempo_chuva_min": 2.2
+      }
+    },
+    {
+      "origem": "Vila Mariana",
+      "destino": "Ana Rosa",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 0.9,
+        "tempo_comum_min": 1.8,
+        "tempo_pico_min": 2.4,
+        "tempo_chuva_min": 2.0
+      }
+    },
+    {
+      "origem": "Ana Rosa",
+      "destino": "Paraíso",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 0.7,
+        "tempo_comum_min": 1.5,
+        "tempo_pico_min": 2.1,
+        "tempo_chuva_min": 1.7
+      }
+    },
+    {
+      "origem": "Paraíso",
+      "destino": "Vergueiro",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 0.9,
+        "tempo_comum_min": 1.8,
+        "tempo_pico_min": 2.4,
+        "tempo_chuva_min": 2.0
+      }
+    },
+    {
+      "origem": "Vergueiro",
+      "destino": "São Joaquim",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 0.9,
+        "tempo_comum_min": 1.8,
+        "tempo_pico_min": 2.4,
+        "tempo_chuva_min": 2.0
+      }
+    },
+    {
+      "origem": "São Joaquim",
+      "destino": "Japão-Liberdade",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 0.8,
+        "tempo_comum_min": 1.7,
+        "tempo_pico_min": 2.2,
+        "tempo_chuva_min": 1.9
+      }
+    },
+    {
+      "origem": "Japão-Liberdade",
+      "destino": "Sé",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 0.6,
+        "tempo_comum_min": 1.4,
+        "tempo_pico_min": 1.9,
+        "tempo_chuva_min": 1.6
+      }
+    },
+    {
+      "origem": "Sé",
+      "destino": "São Bento",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 0.8,
+        "tempo_comum_min": 1.7,
+        "tempo_pico_min": 2.2,
+        "tempo_chuva_min": 1.9
+      }
+    },
+    {
+      "origem": "São Bento",
+      "destino": "Luz",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 0.8,
+        "tempo_comum_min": 1.7,
+        "tempo_pico_min": 2.2,
+        "tempo_chuva_min": 1.9
+      }
+    },
+    {
+      "origem": "Luz",
+      "destino": "Tiradentes",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 0.9,
+        "tempo_comum_min": 1.8,
+        "tempo_pico_min": 2.4,
+        "tempo_chuva_min": 2.0
+      }
+    },
+    {
+      "origem": "Tiradentes",
+      "destino": "Armênia",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.0,
+        "tempo_comum_min": 2.0,
+        "tempo_pico_min": 2.5,
+        "tempo_chuva_min": 2.2
+      }
+    },
+    {
+      "origem": "Armênia",
+      "destino": "Portuguesa-Tietê",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 0.9,
+        "tempo_comum_min": 1.8,
+        "tempo_pico_min": 2.4,
+        "tempo_chuva_min": 2.0
+      }
+    },
+    {
+      "origem": "Portuguesa-Tietê",
+      "destino": "Carandiru",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.1,
+        "tempo_comum_min": 2.1,
+        "tempo_pico_min": 2.7,
+        "tempo_chuva_min": 2.3
+      }
+    },
+    {
+      "origem": "Carandiru",
+      "destino": "Santana",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 0.9,
+        "tempo_comum_min": 1.8,
+        "tempo_pico_min": 2.4,
+        "tempo_chuva_min": 2.0
+      }
+    },
+    {
+      "origem": "Santana",
+      "destino": "Jardim São Paulo-Ayrton Senna",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Jardim São Paulo-Ayrton Senna",
+      "destino": "Parada Inglesa",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Parada Inglesa",
+      "destino": "Tucuruvi",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 0.9,
+        "tempo_comum_min": 1.8,
+        "tempo_pico_min": 2.4,
+        "tempo_chuva_min": 2.0
+      }
+    },
+    {
+      "origem": "Vila Prudente",
+      "destino": "Tamanduateí",
+      "linha": {
+        "numero": 2,
+        "nome": "Verde",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Tamanduateí",
+      "destino": "Sacomã",
+      "linha": {
+        "numero": 2,
+        "nome": "Verde",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Sacomã",
+      "destino": "Alto do Ipiranga",
+      "linha": {
+        "numero": 2,
+        "nome": "Verde",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Alto do Ipiranga",
+      "destino": "Santos-Imigrantes",
+      "linha": {
+        "numero": 2,
+        "nome": "Verde",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Santos-Imigrantes",
+      "destino": "Chácara Klabin",
+      "linha": {
+        "numero": 2,
+        "nome": "Verde",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Chácara Klabin",
+      "destino": "Ana Rosa",
+      "linha": {
+        "numero": 2,
+        "nome": "Verde",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Ana Rosa",
+      "destino": "Paraíso",
+      "linha": {
+        "numero": 2,
+        "nome": "Verde",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Paraíso",
+      "destino": "Brigadeiro",
+      "linha": {
+        "numero": 2,
+        "nome": "Verde",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Brigadeiro",
+      "destino": "Trianon-Masp",
+      "linha": {
+        "numero": 2,
+        "nome": "Verde",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Trianon-Masp",
+      "destino": "Consolação",
+      "linha": {
+        "numero": 2,
+        "nome": "Verde",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Consolação",
+      "destino": "Clínicas",
+      "linha": {
+        "numero": 2,
+        "nome": "Verde",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Clínicas",
+      "destino": "Sumaré",
+      "linha": {
+        "numero": 2,
+        "nome": "Verde",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Sumaré",
+      "destino": "Vila Madalena",
+      "linha": {
+        "numero": 2,
+        "nome": "Verde",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Corinthians-Itaquera",
+      "destino": "Artur Alvim",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.4,
+        "tempo_comum_min": 2.4,
+        "tempo_pico_min": 3.0,
+        "tempo_chuva_min": 2.7
+      }
+    },
+    {
+      "origem": "Artur Alvim",
+      "destino": "Patriarca-Vila Ré",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.9,
+        "tempo_comum_min": 3.1,
+        "tempo_pico_min": 3.7,
+        "tempo_chuva_min": 3.4
+      }
+    },
+    {
+      "origem": "Patriarca-Vila Ré",
+      "destino": "Guilhermina-Esperança",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.1,
+        "tempo_comum_min": 2.0,
+        "tempo_pico_min": 2.6,
+        "tempo_chuva_min": 2.2
+      }
+    },
+    {
+      "origem": "Guilhermina-Esperança",
+      "destino": "Vila Matilde",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.4,
+        "tempo_comum_min": 2.4,
+        "tempo_pico_min": 3.0,
+        "tempo_chuva_min": 2.7
+      }
+    },
+    {
+      "origem": "Vila Matilde",
+      "destino": "Penha",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.7,
+        "tempo_chuva_min": 2.4
+      }
+    },
+    {
+      "origem": "Penha",
+      "destino": "Carrão",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.7,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.5,
+        "tempo_chuva_min": 3.1
+      }
+    },
+    {
+      "origem": "Carrão",
+      "destino": "Tatuapé",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.3,
+        "tempo_comum_min": 2.3,
+        "tempo_pico_min": 2.9,
+        "tempo_chuva_min": 2.5
+      }
+    },
+    {
+      "origem": "Tatuapé",
+      "destino": "Belém",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 2.0,
+        "tempo_comum_min": 3.3,
+        "tempo_pico_min": 3.9,
+        "tempo_chuva_min": 3.5
+      }
+    },
+    {
+      "origem": "Belém",
+      "destino": "Bresser-Mooca",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.1,
+        "tempo_comum_min": 2.0,
+        "tempo_pico_min": 2.6,
+        "tempo_chuva_min": 2.2
+      }
+    },
+    {
+      "origem": "Bresser-Mooca",
+      "destino": "Brás",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.7,
+        "tempo_chuva_min": 2.4
+      }
+    },
+    {
+      "origem": "Brás",
+      "destino": "Pedro II",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.1,
+        "tempo_comum_min": 2.0,
+        "tempo_pico_min": 2.6,
+        "tempo_chuva_min": 2.2
+      }
+    },
+    {
+      "origem": "Pedro II",
+      "destino": "Sé",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.1,
+        "tempo_comum_min": 2.0,
+        "tempo_pico_min": 2.6,
+        "tempo_chuva_min": 2.2
+      }
+    },
+    {
+      "origem": "Sé",
+      "destino": "Anhangabaú",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 0.9,
+        "tempo_comum_min": 1.7,
+        "tempo_pico_min": 2.3,
+        "tempo_chuva_min": 1.9
+      }
+    },
+    {
+      "origem": "Anhangabaú",
+      "destino": "República",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 0.8,
+        "tempo_comum_min": 1.6,
+        "tempo_pico_min": 2.2,
+        "tempo_chuva_min": 1.8
+      }
+    },
+    {
+      "origem": "República",
+      "destino": "Santa Cecília",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.0,
+        "tempo_comum_min": 1.9,
+        "tempo_pico_min": 2.4,
+        "tempo_chuva_min": 2.1
+      }
+    },
+    {
+      "origem": "Santa Cecília",
+      "destino": "Marechal Deodoro",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.1,
+        "tempo_comum_min": 2.0,
+        "tempo_pico_min": 2.6,
+        "tempo_chuva_min": 2.2
+      }
+    },
+    {
+      "origem": "Marechal Deodoro",
+      "destino": "Palmeiras-Barra Funda",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.7,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.5,
+        "tempo_chuva_min": 3.1
+      }
+    },
+    {
+      "origem": "Vila Sônia",
+      "destino": "São Paulo-Morumbi",
+      "linha": {
+        "numero": 4,
+        "nome": "Amarela",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "São Paulo-Morumbi",
+      "destino": "Butantã",
+      "linha": {
+        "numero": 4,
+        "nome": "Amarela",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Butantã",
+      "destino": "Pinheiros",
+      "linha": {
+        "numero": 4,
+        "nome": "Amarela",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Pinheiros",
+      "destino": "Faria Lima",
+      "linha": {
+        "numero": 4,
+        "nome": "Amarela",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Faria Lima",
+      "destino": "Fradique Coutinho",
+      "linha": {
+        "numero": 4,
+        "nome": "Amarela",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Fradique Coutinho",
+      "destino": "Oscar Freire",
+      "linha": {
+        "numero": 4,
+        "nome": "Amarela",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Oscar Freire",
+      "destino": "Paulista",
+      "linha": {
+        "numero": 4,
+        "nome": "Amarela",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Paulista",
+      "destino": "Higienópolis-Mackenzie",
+      "linha": {
+        "numero": 4,
+        "nome": "Amarela",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Higienópolis-Mackenzie",
+      "destino": "República",
+      "linha": {
+        "numero": 4,
+        "nome": "Amarela",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "República",
+      "destino": "Luz",
+      "linha": {
+        "numero": 4,
+        "nome": "Amarela",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Capão Redondo",
+      "destino": "Campo Limpo",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 2.1,
+        "tempo_comum_min": 3.3,
+        "tempo_pico_min": 4.0,
+        "tempo_chuva_min": 3.7
+      }
+    },
+    {
+      "origem": "Campo Limpo",
+      "destino": "Vila das Belezas",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.5,
+        "tempo_comum_min": 2.5,
+        "tempo_pico_min": 3.1,
+        "tempo_chuva_min": 2.8
+      }
+    },
+    {
+      "origem": "Vila das Belezas",
+      "destino": "Giovanni Gronchi",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.3,
+        "tempo_comum_min": 2.3,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      }
+    },
+    {
+      "origem": "Giovanni Gronchi",
+      "destino": "Santo Amaro",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.7,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.4,
+        "tempo_chuva_min": 3.1
+      }
+    },
+    {
+      "origem": "Santo Amaro",
+      "destino": "Largo Treze",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.1,
+        "tempo_comum_min": 2.0,
+        "tempo_pico_min": 2.6,
+        "tempo_chuva_min": 2.2
+      }
+    },
+    {
+      "origem": "Largo Treze",
+      "destino": "Adolfo Pinheiro",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.0,
+        "tempo_comum_min": 1.9,
+        "tempo_pico_min": 2.4,
+        "tempo_chuva_min": 2.1
+      }
+    },
+    {
+      "origem": "Adolfo Pinheiro",
+      "destino": "Alto da Boa Vista",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.1,
+        "tempo_pico_min": 2.7,
+        "tempo_chuva_min": 2.4
+      }
+    },
+    {
+      "origem": "Alto da Boa Vista",
+      "destino": "Borba Gato",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.0,
+        "tempo_comum_min": 1.9,
+        "tempo_pico_min": 2.4,
+        "tempo_chuva_min": 2.1
+      }
+    },
+    {
+      "origem": "Borba Gato",
+      "destino": "Brooklin",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.0,
+        "tempo_comum_min": 1.9,
+        "tempo_pico_min": 2.4,
+        "tempo_chuva_min": 2.1
+      }
+    },
+    {
+      "origem": "Brooklin",
+      "destino": "Campo Belo",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.4,
+        "tempo_comum_min": 2.4,
+        "tempo_pico_min": 3.0,
+        "tempo_chuva_min": 2.7
+      }
+    },
+    {
+      "origem": "Campo Belo",
+      "destino": "Eucaliptos",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.3,
+        "tempo_comum_min": 2.3,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      }
+    },
+    {
+      "origem": "Eucaliptos",
+      "destino": "Moema",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.1,
+        "tempo_comum_min": 2.0,
+        "tempo_pico_min": 2.6,
+        "tempo_chuva_min": 2.2
+      }
+    },
+    {
+      "origem": "Moema",
+      "destino": "AACD-Servidor",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.1,
+        "tempo_pico_min": 2.7,
+        "tempo_chuva_min": 2.4
+      }
+    },
+    {
+      "origem": "AACD-Servidor",
+      "destino": "Hospital São Paulo",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.0,
+        "tempo_comum_min": 1.9,
+        "tempo_pico_min": 2.4,
+        "tempo_chuva_min": 2.1
+      }
+    },
+    {
+      "origem": "Hospital São Paulo",
+      "destino": "Santa Cruz",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.1,
+        "tempo_comum_min": 2.0,
+        "tempo_pico_min": 2.6,
+        "tempo_chuva_min": 2.2
+      }
+    },
+    {
+      "origem": "Santa Cruz",
+      "destino": "Chácara Klabin",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.0,
+        "tempo_comum_min": 1.9,
+        "tempo_pico_min": 2.4,
+        "tempo_chuva_min": 2.1
+      }
+    },
+    {
+      "origem": "Brasilândia",
+      "destino": "Maristela",
+      "linha": {
+        "numero": 6,
+        "nome": "Laranja",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true,
+      "situacao": "prevista"
+    },
+    {
+      "origem": "Maristela",
+      "destino": "Itaberaba-Hospital Vila Penteado",
+      "linha": {
+        "numero": 6,
+        "nome": "Laranja",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true,
+      "situacao": "prevista"
+    },
+    {
+      "origem": "Itaberaba-Hospital Vila Penteado",
+      "destino": "João Paulo I",
+      "linha": {
+        "numero": 6,
+        "nome": "Laranja",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true,
+      "situacao": "prevista"
+    },
+    {
+      "origem": "João Paulo I",
+      "destino": "Freguesia do Ó",
+      "linha": {
+        "numero": 6,
+        "nome": "Laranja",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true,
+      "situacao": "em_operacao_assistida"
+    },
+    {
+      "origem": "Freguesia do Ó",
+      "destino": "Santa Marina",
+      "linha": {
+        "numero": 6,
+        "nome": "Laranja",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true,
+      "situacao": "em_operacao_assistida"
+    },
+    {
+      "origem": "Santa Marina",
+      "destino": "Água Branca",
+      "linha": {
+        "numero": 6,
+        "nome": "Laranja",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true,
+      "situacao": "em_operacao_assistida"
+    },
+    {
+      "origem": "Água Branca",
+      "destino": "SESC-Pompeia",
+      "linha": {
+        "numero": 6,
+        "nome": "Laranja",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true,
+      "situacao": "em_operacao_assistida"
+    },
+    {
+      "origem": "SESC-Pompeia",
+      "destino": "Perdizes",
+      "linha": {
+        "numero": 6,
+        "nome": "Laranja",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true,
+      "situacao": "em_operacao_assistida"
+    },
+    {
+      "origem": "Perdizes",
+      "destino": "PUC-Cardoso de Almeida",
+      "linha": {
+        "numero": 6,
+        "nome": "Laranja",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true,
+      "situacao": "prevista"
+    },
+    {
+      "origem": "PUC-Cardoso de Almeida",
+      "destino": "FAAP-Pacaembu",
+      "linha": {
+        "numero": 6,
+        "nome": "Laranja",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true,
+      "situacao": "prevista"
+    },
+    {
+      "origem": "FAAP-Pacaembu",
+      "destino": "Higienópolis-Mackenzie",
+      "linha": {
+        "numero": 6,
+        "nome": "Laranja",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true,
+      "situacao": "prevista"
+    },
+    {
+      "origem": "Higienópolis-Mackenzie",
+      "destino": "14 Bis-Saracura",
+      "linha": {
+        "numero": 6,
+        "nome": "Laranja",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true,
+      "situacao": "prevista"
+    },
+    {
+      "origem": "14 Bis-Saracura",
+      "destino": "Bela Vista",
+      "linha": {
+        "numero": 6,
+        "nome": "Laranja",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true,
+      "situacao": "prevista"
+    },
+    {
+      "origem": "Bela Vista",
+      "destino": "São Joaquim",
+      "linha": {
+        "numero": 6,
+        "nome": "Laranja",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Metrô",
+      "metricas": {
+        "distancia_km": 1.2,
+        "tempo_comum_min": 2.2,
+        "tempo_pico_min": 2.8,
+        "tempo_chuva_min": 2.5
+      },
+      "metricas_estimadas": true,
+      "situacao": "prevista"
+    },
+    {
+      "origem": "Palmeiras-Barra Funda",
+      "destino": "Água Branca",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Água Branca",
+      "destino": "Lapa",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Lapa",
+      "destino": "Piqueri",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Piqueri",
+      "destino": "Pirituba",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Pirituba",
+      "destino": "Vila Clarice",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Vila Clarice",
+      "destino": "Jaraguá",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Jaraguá",
+      "destino": "Vila Aurora",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Vila Aurora",
+      "destino": "Perus",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Perus",
+      "destino": "Caieiras",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Caieiras",
+      "destino": "Franco da Rocha",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Franco da Rocha",
+      "destino": "Baltazar Fidélis",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Baltazar Fidélis",
+      "destino": "Francisco Morato",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Francisco Morato",
+      "destino": "Botujuru",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Botujuru",
+      "destino": "Campo Limpo Paulista",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Campo Limpo Paulista",
+      "destino": "Várzea Paulista",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Várzea Paulista",
+      "destino": "Jundiaí",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Júlio Prestes",
+      "destino": "Palmeiras-Barra Funda",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Palmeiras-Barra Funda",
+      "destino": "Lapa",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Lapa",
+      "destino": "Domingos de Moraes",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Domingos de Moraes",
+      "destino": "Imperatriz Leopoldina",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Imperatriz Leopoldina",
+      "destino": "Presidente Altino",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Presidente Altino",
+      "destino": "Osasco",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Osasco",
+      "destino": "Comandante Sampaio",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Comandante Sampaio",
+      "destino": "Quitaúna",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Quitaúna",
+      "destino": "General Miguel Costa",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "General Miguel Costa",
+      "destino": "Carapicuíba",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Carapicuíba",
+      "destino": "Santa Terezinha",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Santa Terezinha",
+      "destino": "Antônio João",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Antônio João",
+      "destino": "Barueri",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Barueri",
+      "destino": "Jardim Belval",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Jardim Belval",
+      "destino": "Jardim Silveira",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Jardim Silveira",
+      "destino": "Jandira",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Jandira",
+      "destino": "Sagrado Coração",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Sagrado Coração",
+      "destino": "Engenheiro Cardoso",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Engenheiro Cardoso",
+      "destino": "Itapevi",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Itapevi",
+      "destino": "Santa Rita",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Santa Rita",
+      "destino": "Ambuitá",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Ambuitá",
+      "destino": "Amador Bueno",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Osasco",
+      "destino": "Presidente Altino",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Presidente Altino",
+      "destino": "Ceasa",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Ceasa",
+      "destino": "Villa-Lobos-Jaguaré",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Villa-Lobos-Jaguaré",
+      "destino": "Cidade Universitária",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Cidade Universitária",
+      "destino": "Pinheiros",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Pinheiros",
+      "destino": "Hebraica-Rebouças",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Hebraica-Rebouças",
+      "destino": "Cidade Jardim",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Cidade Jardim",
+      "destino": "Vila Olímpia",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Vila Olímpia",
+      "destino": "Berrini",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Berrini",
+      "destino": "Morumbi",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Morumbi",
+      "destino": "Granja Julieta",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Granja Julieta",
+      "destino": "João Dias",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "João Dias",
+      "destino": "Santo Amaro",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Santo Amaro",
+      "destino": "Socorro",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Socorro",
+      "destino": "Jurubatuba",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Jurubatuba",
+      "destino": "Autódromo",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Autódromo",
+      "destino": "Primavera-Interlagos",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Primavera-Interlagos",
+      "destino": "Grajaú",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Grajaú",
+      "destino": "Bruno Covas-Mendes-Vila Natal",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Bruno Covas-Mendes-Vila Natal",
+      "destino": "Varginha",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Palmeiras-Barra Funda",
+      "destino": "Luz",
+      "linha": {
+        "numero": 10,
+        "nome": "Turquesa",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.5,
+        "tempo_comum_min": 4.9,
+        "tempo_pico_min": 5.5,
+        "tempo_chuva_min": 5.8
+      }
+    },
+    {
+      "origem": "Luz",
+      "destino": "Brás",
+      "linha": {
+        "numero": 10,
+        "nome": "Turquesa",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 2.1,
+        "tempo_comum_min": 3.2,
+        "tempo_pico_min": 3.8,
+        "tempo_chuva_min": 3.9
+      }
+    },
+    {
+      "origem": "Brás",
+      "destino": "Juventus-Mooca",
+      "linha": {
+        "numero": 10,
+        "nome": "Turquesa",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 2.7,
+        "tempo_comum_min": 3.9,
+        "tempo_pico_min": 4.5,
+        "tempo_chuva_min": 4.7
+      }
+    },
+    {
+      "origem": "Juventus-Mooca",
+      "destino": "Ipiranga",
+      "linha": {
+        "numero": 10,
+        "nome": "Turquesa",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.3,
+        "tempo_pico_min": 4.9,
+        "tempo_chuva_min": 5.1
+      }
+    },
+    {
+      "origem": "Ipiranga",
+      "destino": "Tamanduateí",
+      "linha": {
+        "numero": 10,
+        "nome": "Turquesa",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 1.9,
+        "tempo_comum_min": 3.0,
+        "tempo_pico_min": 3.5,
+        "tempo_chuva_min": 3.6
+      }
+    },
+    {
+      "origem": "Tamanduateí",
+      "destino": "São Caetano do Sul",
+      "linha": {
+        "numero": 10,
+        "nome": "Turquesa",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 4.1,
+        "tempo_comum_min": 5.6,
+        "tempo_pico_min": 6.3,
+        "tempo_chuva_min": 6.6
+      }
+    },
+    {
+      "origem": "São Caetano do Sul",
+      "destino": "Utinga",
+      "linha": {
+        "numero": 10,
+        "nome": "Turquesa",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 2.9,
+        "tempo_comum_min": 4.2,
+        "tempo_pico_min": 4.8,
+        "tempo_chuva_min": 4.9
+      }
+    },
+    {
+      "origem": "Utinga",
+      "destino": "Prefeito Saladino",
+      "linha": {
+        "numero": 10,
+        "nome": "Turquesa",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 2.0,
+        "tempo_comum_min": 3.1,
+        "tempo_pico_min": 3.6,
+        "tempo_chuva_min": 3.7
+      }
+    },
+    {
+      "origem": "Prefeito Saladino",
+      "destino": "Prefeito Celso Daniel-Santo André",
+      "linha": {
+        "numero": 10,
+        "nome": "Turquesa",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Prefeito Celso Daniel-Santo André",
+      "destino": "Capuava",
+      "linha": {
+        "numero": 10,
+        "nome": "Turquesa",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Capuava",
+      "destino": "Mauá",
+      "linha": {
+        "numero": 10,
+        "nome": "Turquesa",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 2.6,
+        "tempo_comum_min": 3.8,
+        "tempo_pico_min": 4.4,
+        "tempo_chuva_min": 4.5
+      }
+    },
+    {
+      "origem": "Mauá",
+      "destino": "Guapituba",
+      "linha": {
+        "numero": 10,
+        "nome": "Turquesa",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.4,
+        "tempo_comum_min": 4.8,
+        "tempo_pico_min": 5.4,
+        "tempo_chuva_min": 5.6
+      }
+    },
+    {
+      "origem": "Guapituba",
+      "destino": "Ribeirão Pires",
+      "linha": {
+        "numero": 10,
+        "nome": "Turquesa",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 4.8,
+        "tempo_comum_min": 6.5,
+        "tempo_pico_min": 7.2,
+        "tempo_chuva_min": 7.5
+      }
+    },
+    {
+      "origem": "Ribeirão Pires",
+      "destino": "Rio Grande da Serra",
+      "linha": {
+        "numero": 10,
+        "nome": "Turquesa",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 4.8,
+        "tempo_comum_min": 6.5,
+        "tempo_pico_min": 7.2,
+        "tempo_chuva_min": 7.5
+      }
+    },
+    {
+      "origem": "Palmeiras-Barra Funda",
+      "destino": "Luz",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Luz",
+      "destino": "Brás",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 2.1,
+        "tempo_comum_min": 3.1,
+        "tempo_pico_min": 3.6,
+        "tempo_chuva_min": 3.7
+      }
+    },
+    {
+      "origem": "Brás",
+      "destino": "Tatuapé",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.9,
+        "tempo_comum_min": 5.1,
+        "tempo_pico_min": 5.8,
+        "tempo_chuva_min": 6.0
+      }
+    },
+    {
+      "origem": "Tatuapé",
+      "destino": "Corinthians-Itaquera",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Corinthians-Itaquera",
+      "destino": "Dom Bosco",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Dom Bosco",
+      "destino": "José Bonifácio",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 2.0,
+        "tempo_comum_min": 3.0,
+        "tempo_pico_min": 3.5,
+        "tempo_chuva_min": 3.6
+      }
+    },
+    {
+      "origem": "José Bonifácio",
+      "destino": "Guaianases",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 2.5,
+        "tempo_comum_min": 3.5,
+        "tempo_pico_min": 4.1,
+        "tempo_chuva_min": 4.2
+      }
+    },
+    {
+      "origem": "Guaianases",
+      "destino": "Antônio Gianetti Neto",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.3,
+        "tempo_comum_min": 4.4,
+        "tempo_pico_min": 5.1,
+        "tempo_chuva_min": 5.2
+      }
+    },
+    {
+      "origem": "Antônio Gianetti Neto",
+      "destino": "Ferraz de Vasconcelos",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 2.2,
+        "tempo_comum_min": 3.2,
+        "tempo_pico_min": 3.7,
+        "tempo_chuva_min": 3.8
+      }
+    },
+    {
+      "origem": "Ferraz de Vasconcelos",
+      "destino": "Poá",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.1,
+        "tempo_pico_min": 4.7,
+        "tempo_chuva_min": 4.9
+      }
+    },
+    {
+      "origem": "Poá",
+      "destino": "Calmon Viana",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 1.7,
+        "tempo_comum_min": 2.6,
+        "tempo_pico_min": 3.1,
+        "tempo_chuva_min": 3.2
+      }
+    },
+    {
+      "origem": "Calmon Viana",
+      "destino": "Suzano",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.4,
+        "tempo_comum_min": 4.6,
+        "tempo_pico_min": 5.2,
+        "tempo_chuva_min": 5.4
+      }
+    },
+    {
+      "origem": "Suzano",
+      "destino": "Jundiapeba",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 5.0,
+        "tempo_comum_min": 6.4,
+        "tempo_pico_min": 7.1,
+        "tempo_chuva_min": 7.4
+      }
+    },
+    {
+      "origem": "Jundiapeba",
+      "destino": "Brás Cubas",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Brás Cubas",
+      "destino": "Mogi das Cruzes",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Mogi das Cruzes",
+      "destino": "Estudantes",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 1.8,
+        "tempo_comum_min": 2.7,
+        "tempo_pico_min": 3.3,
+        "tempo_chuva_min": 3.3
+      }
+    },
+    {
+      "origem": "Brás",
+      "destino": "Tatuapé",
+      "linha": {
+        "numero": 12,
+        "nome": "Safira",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Tatuapé",
+      "destino": "Engenheiro Goulart",
+      "linha": {
+        "numero": 12,
+        "nome": "Safira",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Engenheiro Goulart",
+      "destino": "USP Leste",
+      "linha": {
+        "numero": 12,
+        "nome": "Safira",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "USP Leste",
+      "destino": "Comendador Ermelino",
+      "linha": {
+        "numero": 12,
+        "nome": "Safira",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Comendador Ermelino",
+      "destino": "São Miguel Paulista",
+      "linha": {
+        "numero": 12,
+        "nome": "Safira",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "São Miguel Paulista",
+      "destino": "Jardim Helena-Vila Mara",
+      "linha": {
+        "numero": 12,
+        "nome": "Safira",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Jardim Helena-Vila Mara",
+      "destino": "Itaim Paulista",
+      "linha": {
+        "numero": 12,
+        "nome": "Safira",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Itaim Paulista",
+      "destino": "Jardim Romano",
+      "linha": {
+        "numero": 12,
+        "nome": "Safira",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Jardim Romano",
+      "destino": "Engenheiro Manoel Feio",
+      "linha": {
+        "numero": 12,
+        "nome": "Safira",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Engenheiro Manoel Feio",
+      "destino": "Itaquaquecetuba",
+      "linha": {
+        "numero": 12,
+        "nome": "Safira",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Itaquaquecetuba",
+      "destino": "Aracaré",
+      "linha": {
+        "numero": 12,
+        "nome": "Safira",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Aracaré",
+      "destino": "Calmon Viana",
+      "linha": {
+        "numero": 12,
+        "nome": "Safira",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Engenheiro Goulart",
+      "destino": "Guarulhos-CECAP",
+      "linha": {
+        "numero": 13,
+        "nome": "Jade",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Guarulhos-CECAP",
+      "destino": "Aeroporto-Guarulhos",
+      "linha": {
+        "numero": 13,
+        "nome": "Jade",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "CPTM",
+      "metricas": {
+        "distancia_km": 3.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 5.3,
+        "tempo_chuva_min": 5.5
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Vila Prudente",
+      "destino": "Oratório",
+      "linha": {
+        "numero": 15,
+        "nome": "Prata",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Monotrilho",
+      "metricas": {
+        "distancia_km": 1.5,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.4,
+        "tempo_chuva_min": 3.6
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Oratório",
+      "destino": "São Lucas",
+      "linha": {
+        "numero": 15,
+        "nome": "Prata",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Monotrilho",
+      "metricas": {
+        "distancia_km": 1.5,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.4,
+        "tempo_chuva_min": 3.6
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "São Lucas",
+      "destino": "Camilo Haddad",
+      "linha": {
+        "numero": 15,
+        "nome": "Prata",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Monotrilho",
+      "metricas": {
+        "distancia_km": 1.5,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.4,
+        "tempo_chuva_min": 3.6
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Camilo Haddad",
+      "destino": "Vila Tolstói",
+      "linha": {
+        "numero": 15,
+        "nome": "Prata",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Monotrilho",
+      "metricas": {
+        "distancia_km": 1.5,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.4,
+        "tempo_chuva_min": 3.6
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Vila Tolstói",
+      "destino": "Vila União",
+      "linha": {
+        "numero": 15,
+        "nome": "Prata",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Monotrilho",
+      "metricas": {
+        "distancia_km": 1.5,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.4,
+        "tempo_chuva_min": 3.6
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Vila União",
+      "destino": "Jardim Planalto",
+      "linha": {
+        "numero": 15,
+        "nome": "Prata",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Monotrilho",
+      "metricas": {
+        "distancia_km": 1.5,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.4,
+        "tempo_chuva_min": 3.6
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Jardim Planalto",
+      "destino": "Sapopemba",
+      "linha": {
+        "numero": 15,
+        "nome": "Prata",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Monotrilho",
+      "metricas": {
+        "distancia_km": 1.5,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.4,
+        "tempo_chuva_min": 3.6
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Sapopemba",
+      "destino": "Fazenda da Juta",
+      "linha": {
+        "numero": 15,
+        "nome": "Prata",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Monotrilho",
+      "metricas": {
+        "distancia_km": 1.5,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.4,
+        "tempo_chuva_min": 3.6
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Fazenda da Juta",
+      "destino": "São Mateus",
+      "linha": {
+        "numero": 15,
+        "nome": "Prata",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Monotrilho",
+      "metricas": {
+        "distancia_km": 1.5,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.4,
+        "tempo_chuva_min": 3.6
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "São Mateus",
+      "destino": "Jardim Colonial",
+      "linha": {
+        "numero": 15,
+        "nome": "Prata",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Monotrilho",
+      "metricas": {
+        "distancia_km": 1.5,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.4,
+        "tempo_chuva_min": 3.6
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Morumbi",
+      "destino": "Chucri Zaidan",
+      "linha": {
+        "numero": 17,
+        "nome": "Ouro",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Monotrilho",
+      "metricas": {
+        "distancia_km": 1.5,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.4,
+        "tempo_chuva_min": 3.6
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Chucri Zaidan",
+      "destino": "Vila Cordeiro",
+      "linha": {
+        "numero": 17,
+        "nome": "Ouro",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Monotrilho",
+      "metricas": {
+        "distancia_km": 1.5,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.4,
+        "tempo_chuva_min": 3.6
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Vila Cordeiro",
+      "destino": "Campo Belo",
+      "linha": {
+        "numero": 17,
+        "nome": "Ouro",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Monotrilho",
+      "metricas": {
+        "distancia_km": 1.5,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.4,
+        "tempo_chuva_min": 3.6
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Campo Belo",
+      "destino": "Vereador José Diniz",
+      "linha": {
+        "numero": 17,
+        "nome": "Ouro",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Monotrilho",
+      "metricas": {
+        "distancia_km": 1.5,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.4,
+        "tempo_chuva_min": 3.6
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Vereador José Diniz",
+      "destino": "Brooklin Paulista",
+      "linha": {
+        "numero": 17,
+        "nome": "Ouro",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Monotrilho",
+      "metricas": {
+        "distancia_km": 1.5,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.4,
+        "tempo_chuva_min": 3.6
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Brooklin Paulista",
+      "destino": "Aeroporto de Congonhas",
+      "linha": {
+        "numero": 17,
+        "nome": "Ouro",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Monotrilho",
+      "metricas": {
+        "distancia_km": 1.5,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.4,
+        "tempo_chuva_min": 3.6
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Aeroporto de Congonhas",
+      "destino": "Washington Luís",
+      "linha": {
+        "numero": 17,
+        "nome": "Ouro",
+        "linha_transferencia": null,
+        "nome_transferencia": null
+      },
+      "tipo": "Monotrilho",
+      "metricas": {
+        "distancia_km": 1.5,
+        "tempo_comum_min": 2.8,
+        "tempo_pico_min": 3.4,
+        "tempo_chuva_min": 3.6
+      },
+      "metricas_estimadas": true
+    },
+    {
+      "origem": "Ana Rosa",
+      "destino": "Ana Rosa",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": 2,
+        "nome_transferencia": "Verde"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 2.0,
+        "tempo_pico_min": 4.0,
+        "tempo_chuva_min": 5.0
+      }
+    },
+    {
+      "origem": "Paraíso",
+      "destino": "Paraíso",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": 2,
+        "nome_transferencia": "Verde"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 2.0,
+        "tempo_pico_min": 4.0,
+        "tempo_chuva_min": 5.0
+      }
+    },
+    {
+      "origem": "Sé",
+      "destino": "Sé",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": 3,
+        "nome_transferencia": "Vermelha"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 3.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Luz",
+      "destino": "Luz",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": 4,
+        "nome_transferencia": "Amarela"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 7.0,
+        "tempo_chuva_min": 8.0
+      }
+    },
+    {
+      "origem": "Santa Cruz",
+      "destino": "Santa Cruz",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": 5,
+        "nome_transferencia": "Lilás"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "São Joaquim",
+      "destino": "São Joaquim",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": 6,
+        "nome_transferencia": "Laranja"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      },
+      "situacao": "prevista"
+    },
+    {
+      "origem": "Luz",
+      "destino": "Luz",
+      "linha": {
+        "numero": 1,
+        "nome": "Azul",
+        "linha_transferencia": 11,
+        "nome_transferencia": "Coral"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.5,
+        "tempo_pico_min": 7.0,
+        "tempo_chuva_min": 8.0
+      }
+    },
+    {
+      "origem": "Chácara Klabin",
+      "destino": "Chácara Klabin",
+      "linha": {
+        "numero": 2,
+        "nome": "Verde",
+        "linha_transferencia": 5,
+        "nome_transferencia": "Lilás"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Tamanduateí",
+      "destino": "Tamanduateí",
+      "linha": {
+        "numero": 2,
+        "nome": "Verde",
+        "linha_transferencia": 10,
+        "nome_transferencia": "Turquesa"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Vila Prudente",
+      "destino": "Vila Prudente",
+      "linha": {
+        "numero": 2,
+        "nome": "Verde",
+        "linha_transferencia": 15,
+        "nome_transferencia": "Prata"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "República",
+      "destino": "República",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": 4,
+        "nome_transferencia": "Amarela"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 7.0,
+        "tempo_chuva_min": 8.0
+      }
+    },
+    {
+      "origem": "Palmeiras-Barra Funda",
+      "destino": "Palmeiras-Barra Funda",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": 7,
+        "nome_transferencia": "Rubi"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 6.0
+      }
+    },
+    {
+      "origem": "Palmeiras-Barra Funda",
+      "destino": "Palmeiras-Barra Funda",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": 8,
+        "nome_transferencia": "Diamante"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 6.0
+      }
+    },
+    {
+      "origem": "Brás",
+      "destino": "Brás",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": 10,
+        "nome_transferencia": "Turquesa"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Brás",
+      "destino": "Brás",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": 11,
+        "nome_transferencia": "Coral"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Tatuapé",
+      "destino": "Tatuapé",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": 11,
+        "nome_transferencia": "Coral"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Tatuapé",
+      "destino": "Tatuapé",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": 12,
+        "nome_transferencia": "Safira"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Higienópolis-Mackenzie",
+      "destino": "Higienópolis-Mackenzie",
+      "linha": {
+        "numero": 4,
+        "nome": "Amarela",
+        "linha_transferencia": 6,
+        "nome_transferencia": "Laranja"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      },
+      "situacao": "prevista"
+    },
+    {
+      "origem": "Pinheiros",
+      "destino": "Pinheiros",
+      "linha": {
+        "numero": 4,
+        "nome": "Amarela",
+        "linha_transferencia": 9,
+        "nome_transferencia": "Esmeralda"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Luz",
+      "destino": "Luz",
+      "linha": {
+        "numero": 4,
+        "nome": "Amarela",
+        "linha_transferencia": 11,
+        "nome_transferencia": "Coral"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Santo Amaro",
+      "destino": "Santo Amaro",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": 9,
+        "nome_transferencia": "Esmeralda"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 5.0,
+        "tempo_pico_min": 8.0,
+        "tempo_chuva_min": 9.0
+      }
+    },
+    {
+      "origem": "Campo Belo",
+      "destino": "Campo Belo",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": 17,
+        "nome_transferencia": "Ouro"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Água Branca",
+      "destino": "Água Branca",
+      "linha": {
+        "numero": 6,
+        "nome": "Laranja",
+        "linha_transferencia": 7,
+        "nome_transferencia": "Rubi"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      },
+      "situacao": "prevista"
+    },
+    {
+      "origem": "Palmeiras-Barra Funda",
+      "destino": "Palmeiras-Barra Funda",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": 8,
+        "nome_transferencia": "Diamante"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Palmeiras-Barra Funda",
+      "destino": "Palmeiras-Barra Funda",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": 10,
+        "nome_transferencia": "Turquesa"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Palmeiras-Barra Funda",
+      "destino": "Palmeiras-Barra Funda",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": 11,
+        "nome_transferencia": "Coral"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Osasco",
+      "destino": "Osasco",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": 9,
+        "nome_transferencia": "Esmeralda"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Presidente Altino",
+      "destino": "Presidente Altino",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": 9,
+        "nome_transferencia": "Esmeralda"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Morumbi",
+      "destino": "Morumbi",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": 17,
+        "nome_transferencia": "Ouro"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Brás",
+      "destino": "Brás",
+      "linha": {
+        "numero": 10,
+        "nome": "Turquesa",
+        "linha_transferencia": 11,
+        "nome_transferencia": "Coral"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Brás",
+      "destino": "Brás",
+      "linha": {
+        "numero": 10,
+        "nome": "Turquesa",
+        "linha_transferencia": 12,
+        "nome_transferencia": "Safira"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Calmon Viana",
+      "destino": "Calmon Viana",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": 12,
+        "nome_transferencia": "Safira"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 3.0,
+        "tempo_pico_min": 5.0,
+        "tempo_chuva_min": 6.0
+      }
+    },
+    {
+      "origem": "Engenheiro Goulart",
+      "destino": "Engenheiro Goulart",
+      "linha": {
+        "numero": 12,
+        "nome": "Safira",
+        "linha_transferencia": 13,
+        "nome_transferencia": "Jade"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Ana Rosa",
+      "destino": "Ana Rosa",
+      "linha": {
+        "numero": 2,
+        "nome": "Verde",
+        "linha_transferencia": 1,
+        "nome_transferencia": "Azul"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Paraíso",
+      "destino": "Paraíso",
+      "linha": {
+        "numero": 2,
+        "nome": "Verde",
+        "linha_transferencia": 1,
+        "nome_transferencia": "Azul"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Sé",
+      "destino": "Sé",
+      "linha": {
+        "numero": 3,
+        "nome": "Vermelha",
+        "linha_transferencia": 1,
+        "nome_transferencia": "Azul"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 3.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Luz",
+      "destino": "Luz",
+      "linha": {
+        "numero": 4,
+        "nome": "Amarela",
+        "linha_transferencia": 1,
+        "nome_transferencia": "Azul"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Santa Cruz",
+      "destino": "Santa Cruz",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": 1,
+        "nome_transferencia": "Azul"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "São Joaquim",
+      "destino": "São Joaquim",
+      "linha": {
+        "numero": 6,
+        "nome": "Laranja",
+        "linha_transferencia": 1,
+        "nome_transferencia": "Azul"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      },
+      "situacao": "prevista"
+    },
+    {
+      "origem": "Luz",
+      "destino": "Luz",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": 1,
+        "nome_transferencia": "Azul"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Chácara Klabin",
+      "destino": "Chácara Klabin",
+      "linha": {
+        "numero": 5,
+        "nome": "Lilás",
+        "linha_transferencia": 2,
+        "nome_transferencia": "Verde"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 7.0,
+        "tempo_chuva_min": 8.0
+      }
+    },
+    {
+      "origem": "Tamanduateí",
+      "destino": "Tamanduateí",
+      "linha": {
+        "numero": 10,
+        "nome": "Turquesa",
+        "linha_transferencia": 2,
+        "nome_transferencia": "Verde"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 7.0,
+        "tempo_chuva_min": 8.0
+      }
+    },
+    {
+      "origem": "Vila Prudente",
+      "destino": "Vila Prudente",
+      "linha": {
+        "numero": 15,
+        "nome": "Prata",
+        "linha_transferencia": 2,
+        "nome_transferencia": "Verde"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "República",
+      "destino": "República",
+      "linha": {
+        "numero": 4,
+        "nome": "Amarela",
+        "linha_transferencia": 3,
+        "nome_transferencia": "Vermelha"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Palmeiras-Barra Funda",
+      "destino": "Palmeiras-Barra Funda",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": 3,
+        "nome_transferencia": "Vermelha"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Palmeiras-Barra Funda",
+      "destino": "Palmeiras-Barra Funda",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": 3,
+        "nome_transferencia": "Vermelha"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Brás",
+      "destino": "Brás",
+      "linha": {
+        "numero": 10,
+        "nome": "Turquesa",
+        "linha_transferencia": 3,
+        "nome_transferencia": "Vermelha"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Brás",
+      "destino": "Brás",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": 3,
+        "nome_transferencia": "Vermelha"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Tatuapé",
+      "destino": "Tatuapé",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": 3,
+        "nome_transferencia": "Vermelha"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 7.0,
+        "tempo_chuva_min": 8.0
+      }
+    },
+    {
+      "origem": "Tatuapé",
+      "destino": "Tatuapé",
+      "linha": {
+        "numero": 12,
+        "nome": "Safira",
+        "linha_transferencia": 3,
+        "nome_transferencia": "Vermelha"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Higienópolis-Mackenzie",
+      "destino": "Higienópolis-Mackenzie",
+      "linha": {
+        "numero": 6,
+        "nome": "Laranja",
+        "linha_transferencia": 4,
+        "nome_transferencia": "Amarela"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      },
+      "situacao": "prevista"
+    },
+    {
+      "origem": "Pinheiros",
+      "destino": "Pinheiros",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": 4,
+        "nome_transferencia": "Amarela"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Luz",
+      "destino": "Luz",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": 4,
+        "nome_transferencia": "Amarela"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Santo Amaro",
+      "destino": "Santo Amaro",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": 5,
+        "nome_transferencia": "Lilás"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Campo Belo",
+      "destino": "Campo Belo",
+      "linha": {
+        "numero": 17,
+        "nome": "Ouro",
+        "linha_transferencia": 5,
+        "nome_transferencia": "Lilás"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Água Branca",
+      "destino": "Água Branca",
+      "linha": {
+        "numero": 7,
+        "nome": "Rubi",
+        "linha_transferencia": 6,
+        "nome_transferencia": "Laranja"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      },
+      "situacao": "prevista"
+    },
+    {
+      "origem": "Palmeiras-Barra Funda",
+      "destino": "Palmeiras-Barra Funda",
+      "linha": {
+        "numero": 8,
+        "nome": "Diamante",
+        "linha_transferencia": 7,
+        "nome_transferencia": "Rubi"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Palmeiras-Barra Funda",
+      "destino": "Palmeiras-Barra Funda",
+      "linha": {
+        "numero": 10,
+        "nome": "Turquesa",
+        "linha_transferencia": 7,
+        "nome_transferencia": "Rubi"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 5.0,
+        "tempo_pico_min": 7.0,
+        "tempo_chuva_min": 8.0
+      }
+    },
+    {
+      "origem": "Palmeiras-Barra Funda",
+      "destino": "Palmeiras-Barra Funda",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": 7,
+        "nome_transferencia": "Rubi"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Osasco",
+      "destino": "Osasco",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": 8,
+        "nome_transferencia": "Diamante"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Presidente Altino",
+      "destino": "Presidente Altino",
+      "linha": {
+        "numero": 9,
+        "nome": "Esmeralda",
+        "linha_transferencia": 8,
+        "nome_transferencia": "Diamante"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Morumbi",
+      "destino": "Morumbi",
+      "linha": {
+        "numero": 17,
+        "nome": "Ouro",
+        "linha_transferencia": 9,
+        "nome_transferencia": "Esmeralda"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Brás",
+      "destino": "Brás",
+      "linha": {
+        "numero": 11,
+        "nome": "Coral",
+        "linha_transferencia": 10,
+        "nome_transferencia": "Turquesa"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Brás",
+      "destino": "Brás",
+      "linha": {
+        "numero": 12,
+        "nome": "Safira",
+        "linha_transferencia": 10,
+        "nome_transferencia": "Turquesa"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Calmon Viana",
+      "destino": "Calmon Viana",
+      "linha": {
+        "numero": 12,
+        "nome": "Safira",
+        "linha_transferencia": 11,
+        "nome_transferencia": "Coral"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    },
+    {
+      "origem": "Engenheiro Goulart",
+      "destino": "Engenheiro Goulart",
+      "linha": {
+        "numero": 13,
+        "nome": "Jade",
+        "linha_transferencia": 12,
+        "nome_transferencia": "Safira"
+      },
+      "tipo": "Baldeação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
+    }
+  ]
+}

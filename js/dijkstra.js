@@ -1,57 +1,156 @@
-function calcularRotaDijkstra(grafo, inicio, fim) {
-    const distancias = {}
-    const anteriores = {}
+function calcularRotaDijkstra(
+    grafo,
+    inicio,
+    fim,
+    opcoes = {}
+) {
+
+    const {
+        modoTempo = "comum",
+        linhasInterditadas = [],
+        estacoesInterditadas = []
+    } = opcoes;
+
+    const distancias = {};
+    const anteriores = {};
     const visitados = new Set();
-    const nos = Object.keys(grafo)
-//dist-guarda o tempo acumulado do inicio até cada estação
-//anteriores guarda o passo anterior de cada estação para podermos reconstituir  o caminho completo no final
-//visitados 
+
+    const nos = Object.keys(grafo);
+
     nos.forEach(no => {
-        distancia[no] = Infinity;
+        distancias[no] = Infinity;
         anteriores[no] = null;
     });
-    distancia[inicio] = 0;
 
-    //loop principal/ infinity por enquanto antes de colococar a distancia real
-        while (true){
+    distancias[inicio] = 0;
+
+    while (true) {
+
         let noAtual = null;
-        let menosDistancia = Infinity;
-    // procura entre todas as estações não visitadas qual o tempo menor
+        let menorDistancia = Infinity;
+
         nos.forEach(no => {
-            if (!visitados.has(no) && distancias[no] <menorDistancia){
+
+            if (
+                !visitados.has(no) &&
+                distancias[no] < menorDistancia
+            ) {
                 menorDistancia = distancias[no];
                 noAtual = no;
-        
             }
+
         });
-//paragem: se não houver mias nós acessíveis ou se chegámos ao destino
-        if (noAtual === null || noAtual === fim) break;
+
+        if (noAtual === null) {
+            break;
+        }
+
+        if (noAtual === fim) {
+            break;
+        }
 
         visitados.add(noAtual);
 
- //relaxamento das arestas (atualização das distâncias dos vizinhos )
         (grafo[noAtual] || []).forEach(vizinho => {
-            if (!visitados.has(vizinho.destino)){
-        const x  novaDistancia < distancias[noAtual] + vizinho.tempo;
-                if (novaDistancia < distancias[vizinho.destino]) {
-                    distancias[vizinho.destino] = novaDistancia;
-                    anteriores[vizinho.destino] = { no: noAtual, tipo: vizinho.tipo}
-                }
-              }
+
+            if (visitados.has(vizinho.destino)) {
+                return;
             }
+
+            if (
+                estacoesInterditadas.includes(
+                    vizinho.destino
+                )
+            ) {
+                return;
+            }
+
+            if (
+                linhasInterditadas.includes(
+                    String(vizinho.linha)
+                )
+            ) {
+                return;
+            }
+
+            let tempoTrecho;
+
+            switch (modoTempo) {
+
+                case "pico":
+                    tempoTrecho =
+                        vizinho.tempoPico ??
+                        vizinho.tempoComum;
+                    break;
+
+                case "chuva":
+                    tempoTrecho =
+                        vizinho.tempoChuva ??
+                        vizinho.tempoComum;
+                    break;
+
+                default:
+                    tempoTrecho =
+                        vizinho.tempoComum;
+            }
+
+            let novaDistancia =
+                distancias[noAtual] +
+                tempoTrecho;
+
+            if (
+                vizinho.tipo &&
+                vizinho.tipo.toLowerCase() === "baldeacao"
+            ) {
+                novaDistancia += 2;
+            }
+
+            if (
+                novaDistancia <
+                distancias[vizinho.destino]
+            ) {
+
+                distancias[vizinho.destino] =
+                    novaDistancia;
+
+                anteriores[vizinho.destino] = {
+                    no: noAtual,
+                    tipo: vizinho.tipo,
+                    linha: vizinho.linha,
+                    nomeLinha: vizinho.nomeLinha,
+                    cor: vizinho.cor
+                };
+            }
+
         });
+
     }
-    //Reconstrução do caminho do destino até a origem
+
     const caminho = [];
-    let passo = fim;
 
-    while (passo) {
-        caminho.unshift(passo);
-        passo = anteriores[passo] ? anteriores[passo].no : null;
+    let atual = fim;
+
+    while (atual !== null) {
+
+        caminho.unshift({
+            estacao: atual,
+            linha:
+                anteriores[atual]?.linha || null,
+            nomeLinha:
+                anteriores[atual]?.nomeLinha || null,
+            tipo:
+                anteriores[atual]?.tipo || null,
+            cor:
+                anteriores[atual]?.cor || null
+        });
+
+        atual = anteriores[atual]
+            ? anteriores[atual].no
+            : null;
     }
 
-    return{ caminho, tempoTotal: distancias[fim] };
+    return {
+        caminho,
+        tempoTotal: distancias[fim]
+    };
 }
-
-
-
