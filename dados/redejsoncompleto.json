@@ -4962,6 +4962,24 @@
         "tempo_pico_min": 6.0,
         "tempo_chuva_min": 7.0
       }
+    },
+    {
+      "origem": "Paulista",
+      "destino": "Consolação",
+      "linha": {
+        "numero": 4,
+        "nome": "Amarela",
+        "linha_transferencia": 2,
+        "nome_transferencia": "Verde"
+      },
+      "tipo": "Baldeação",
+      "nome_baldeacao": "Paulista / Consolação",
+      "metricas": {
+        "distancia_km": 0.0,
+        "tempo_comum_min": 4.0,
+        "tempo_pico_min": 6.0,
+        "tempo_chuva_min": 7.0
+      }
     }
   ]
 }

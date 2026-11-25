@@ -1,0 +1,19 @@
+ALTERAÇÕES NO PROJETO
+
+- O seletor de origem/destino inclui estações que aparecem na rede auxiliar, permitindo destinos como Consolação.
+- As cinco linhas principais exibidas como rede-base continuam sendo Azul (1), Vermelha (3), Lilás (5), Turquesa (10) e Coral (11).
+- As demais linhas do JSON são usadas como conexões auxiliares de contingência no cálculo. Elas não são desenhadas integralmente no mapa: somente o trecho da rota calculada é destacado.
+- O algoritmo considera interdições de linha e estação e pode trocar de linha em pontos de baldeação cadastrados no JSON.
+- O mapa desenha a rede principal, os pontos de estação, as baldeações e destaca o percurso escolhido.
+- Coordenadas: o app tenta carregar uma base pública de estações (Gist sp_metro_stations.json) e possui complementos locais para integrações/nomes divergentes. A base externa é antiga; confira coordenadas e cobertura das estações antes de publicar. Se a fonte estiver indisponível, o mapa ainda abre, mas estações sem coordenadas não serão desenhadas.
+
+TESTE DE CONTINGÊNCIA EXECUTADO
+Origem: Jabaquara | Destino: Consolação | Linha 4 Amarela interditada
+Resultado calculado: Jabaquara (Linha 1 Azul) -> Paraíso (baldeação) -> Consolação (Linha 2 Verde).
+
+OBSERVAÇÃO IMPORTANTE
+O cálculo auxiliar usa os trechos e baldeações existentes no arquivo dados/redejsoncompleto.json. A correção do algoritmo não valida por si só a operação real em tempo real; mantenha o JSON atualizado e revise as integrações conforme a operadora.
+
+
+CORREÇÃO ADICIONAL — BALDEAÇÃO PAULISTA / CONSOLAÇÃO
+Foi cadastrada a conexão entre Paulista (Linha 4-Amarela) e Consolação (Linha 2-Verde), permitindo, por exemplo, o trajeto Parada Inglesa → Luz → Linha 4-Amarela → Paulista/Consolação → destino, mesmo com Paraíso interditada. A conexão é apenas uma baldeação auxiliar; a Linha Verde não foi adicionada como linha principal.

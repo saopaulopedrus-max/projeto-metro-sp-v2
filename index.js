@@ -1,288 +1,216 @@
-let grafoGlobal = null;
-let mapaLeaflet = null;
-let camadaRota = null;
+let grafoGlobal;
+let mapaLeaflet;
+let camadaRede;
+let camadaRota;
+let marcadores = [];
+let coordenadas = new Map();
+const COORDENADAS_URL = "https://gist.githubusercontent.com/thiagodsd/dac67b331cb04cfb85fe21610cdeb50a/raw/30e27385e8d77274b46b7028d6e0d497c90c3cbe/sp_metro_stations.json";
+
+function normalizarNome(nome) {
+  return String(nome || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
+async function carregarCoordenadas() {
+  try {
+    const resp = await fetch(COORDENADAS_URL);
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const dados = await resp.json();
+    Object.values(dados).forEach(est => {
+      const lat = Number(est.location?.latitude), lng = Number(est.location?.longitude);
+      if (est.title && Number.isFinite(lat) && Number.isFinite(lng)) coordenadas.set(normalizarNome(est.title), [lat, lng]);
+    });
+  } catch (e) {
+    console.warn("Não foi possível carregar a base externa de coordenadas:", e);
+  }
+  // Complementos para estações de integração e nomes divergentes da base antiga.
+  const complementos = {
+    "Jardim São Paulo-Ayrton Senna": [-23.492233, -46.616687],
+    "Japão-Liberdade": [-23.555535, -46.635956],
+    "Palmeiras-Barra Funda": [-23.525429, -46.667],
+    "Corinthians-Itaquera": [-23.5425, -46.4714],
+    "Tatuapé": [-23.5407, -46.5765], "Brás": [-23.5461, -46.6164],
+    "Luz": [-23.5362, -46.6333], "Paraíso": [-23.575922, -46.64141],
+    "Ana Rosa": [-23.581376, -46.638388], "Santa Cruz": [-23.599225, -46.636659],
+    "Sé": [-23.549291, -46.633471], "Consolação": [-23.556094, -46.662443],
+    "Pinheiros": [-23.565934, -46.701087], "Santo Amaro": [-23.6542, -46.7113],
+    "Tamanduateí": [-23.592985, -46.589293], "Vila Prudente": [-23.57979, -46.581287]
+  };
+  Object.entries(complementos).forEach(([nome, coord]) => coordenadas.set(normalizarNome(nome), coord));
+}
+
+function obterCoordenada(nome) { return coordenadas.get(normalizarNome(nome)); }
 
 async function inicializarApp() {
+  mapaLeaflet = L.map("map").setView([-23.5503, -46.6339], 11);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: "© OpenStreetMap" }).addTo(mapaLeaflet);
+  camadaRede = L.layerGroup().addTo(mapaLeaflet);
+  camadaRota = L.layerGroup().addTo(mapaLeaflet);
 
-    // Inicializa mapa
-    mapaLeaflet = L.map("map").setView(
-        [-23.5503, -46.6339],
-        11
-    );
+  [grafoGlobal] = await Promise.all([carregarGrafo(), carregarCoordenadas()]);
+  if (!grafoGlobal) return alert("Não foi possível carregar as estações.");
 
-    L.tileLayer(
-        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-        {
-            maxZoom: 19,
-            attribution: "© OpenStreetMap"
-        }
-    ).addTo(mapaLeaflet);
-
-    try {
-
-        grafoGlobal = await carregarGrafo();
-
-        if (!grafoGlobal) {
-            console.error("Erro ao carregar rede.json");
-            return;
-        }
-
-        const estacoes = Object.keys(grafoGlobal);
-
-        const selectOrigem =
-            document.getElementById("origem");
-
-        const selectDestino =
-            document.getElementById("destino");
-
-        const selectInterditada =
-            document.getElementById(
-                "estacao-interditada"
-            );
-
-        selectOrigem.innerHTML =
-            '<option value="">Selecione a Origem</option>';
-
-        selectDestino.innerHTML =
-            '<option value="">Selecione o Destino</option>';
-
-        if (selectInterditada) {
-            selectInterditada.innerHTML =
-                '<option value="">Nenhuma</option>';
-        }
-
-        estacoes.forEach(estacao => {
-
-            selectOrigem.innerHTML += `
-                <option value="${estacao}">
-                    ${estacao}
-                </option>
-            `;
-
-            selectDestino.innerHTML += `
-                <option value="${estacao}">
-                    ${estacao}
-                </option>
-            `;
-
-            if (selectInterditada) {
-                selectInterditada.innerHTML += `
-                    <option value="${estacao}">
-                        ${estacao}
-                    </option>
-                `;
-            }
-        });
-
-        console.log("Aplicação carregada.");
-
-    } catch (erro) {
-        console.error(
-            "Falha ao inicializar:",
-            erro
-        );
-    }
+  // O seletor inclui estações das linhas auxiliares para permitir destinos como Consolação.
+  // A visualização da rede, porém, mantém somente as cinco linhas principais.
+  const estacoes = [...new Set(Object.keys(grafoGlobal).map(id => id.split("::")[0]))]
+    .sort((a, b) => a.localeCompare(b, "pt-BR"));
+  ["origem", "destino"].forEach(id => preencherSelect(document.getElementById(id), estacoes, "Selecione a estação"));
+  preencherSelect(document.getElementById("estacao-interditada"), estacoes, "Nenhuma");
+  desenharRedePrincipal();
+  mapaLeaflet.invalidateSize();
 }
 
-function obterCorLinha(linha) {
-    return CORES_LINHAS[linha] || "#666666";
+function preencherSelect(select, opcoes, primeiraOpcao) {
+  // Origem e destino usam campos de pesquisa com sugestões; outros filtros continuam como select.
+  if (select.tagName === "INPUT") {
+    const lista = document.getElementById(select.getAttribute("list"));
+    lista.replaceChildren();
+    opcoes.forEach(estacao => lista.appendChild(new Option(estacao, estacao)));
+    return;
+  }
+  select.replaceChildren(new Option(primeiraOpcao, ""));
+  opcoes.forEach(estacao => select.add(new Option(estacao, estacao)));
 }
 
-inicializarApp();
-;
-        selectOrigem.innerHTML += `<option value="${estacao}">${estacao}</option>`;
-        selectDestino.innerHTML += `<option value="${estacao}">${estacao}</option>`;
-;
-
-
-// Escutador do botão Calcular Rota
-document.getElementById('btn-calcular').addEventListener('click', () => {
-
-    const origem =
-        document.getElementById('origem').value;
-
-    const destino =
-        document.getElementById('destino').value;
-
-    const modo =
-        document.getElementById('modo-transporte').value;
-
-    const selectInterditada =
-    document.getElementById(
-        'estacao-interditada'
-    );
-    
-    const apenasAcessivel =
-        document.getElementById('apenas-acessiveis').checked;
-
-    const horarioPico =
-        document.getElementById('horario-pico').checked;
-
-    const chuva =
-        document.getElementById('chuva').checked;
-const linhasInterditadas = [];
-
-document
-    .querySelectorAll('.linha-interditada:checked')
-    .forEach(item => {
-
-        linhasInterditadas.push(
-            item.value
-        );
-
+function desenharRedePrincipal() {
+  camadaRede.clearLayers();
+  const segmentosVistos = new Set();
+  Object.entries(grafoGlobal).forEach(([origemId, arestas]) => {
+    const [origem, linha] = origemId.split("::");
+    if (!LINHAS_PRINCIPAIS.has(linha)) return;
+    arestas.forEach(a => {
+      if (a.tipo !== "trecho") return;
+      const destino = a.destino.split("::")[0];
+      const chave = [origem, destino, linha].sort().join("|");
+      if (segmentosVistos.has(chave)) return;
+      segmentosVistos.add(chave);
+      const p1 = obterCoordenada(origem), p2 = obterCoordenada(destino);
+      if (p1 && p2) L.polyline([p1, p2], { color: a.cor, weight: 4, opacity: 0.58 }).addTo(camadaRede);
     });
-    if (!origem || !destino) {
-        alert("Por favor, selecione origem e destino!");
-        return;
-    }
-
-    if (origem === destino) {
-        alert("A origem e o destino devem ser diferentes!");
-        return;
-    }
-
-    // Executa o algoritmo Dijkstra
-   let modoTempo = "comum";
-
-if (horarioPico) {
-    modoTempo = "pico";
+  });
+  const estacoes = new Set(Object.keys(grafoGlobal).map(id => id.split("::")[0]));
+  estacoes.forEach(nome => {
+    const p = obterCoordenada(nome);
+    if (!p) return;
+    const linhas = [...new Set(Object.keys(grafoGlobal).filter(id => id.startsWith(`${nome}::`)).map(id => id.split("::")[1]))];
+    const ehBaldeacao = linhas.length > 1;
+    const m = L.circleMarker(p, { radius: ehBaldeacao ? 6 : 3.5, color: ehBaldeacao ? "#ff7900" : "#243b53", weight: 1.5, fillColor: "#fff", fillOpacity: 1 })
+      .bindTooltip(`${nome}${ehBaldeacao ? " • Baldeação" : ""}<br>${linhas.map(l => `Linha ${l} - ${LINHAS_DO_GRUPO[l]?.nome || ""}`).join("<br>")}`)
+      .addTo(camadaRede);
+    marcadores.push(m);
+  });
 }
 
-if (chuva) {
-    modoTempo = "chuva";
+function calcularEExibirRota() {
+  const origem = document.getElementById("origem").value;
+  const destino = document.getElementById("destino").value;
+  const estacoesValidas = new Set(Object.keys(grafoGlobal).map(id => id.split("::")[0]));
+  if (!origem || !destino) return alert("Pesquise e selecione uma estação de origem e uma de destino.");
+  if (!estacoesValidas.has(origem) || !estacoesValidas.has(destino)) {
+    return alert("Escolha uma estação válida nas sugestões da pesquisa.");
+  }
+  if (origem === destino) return alert("Origem e destino devem ser diferentes.");
+  const linhasInterditadas = [...document.querySelectorAll(".linha-interditada:checked")].map(x => x.value);
+  const estacaoInterditada = document.getElementById("estacao-interditada").value;
+  const modoTempo = document.getElementById("chuva").checked ? "chuva" : document.getElementById("horario-pico").checked ? "pico" : "comum";
+  const resultado = calcularRotaDijkstra(grafoGlobal, origem, destino, {
+    modoTempo, linhasInterditadas, estacoesInterditadas: estacaoInterditada ? [estacaoInterditada] : []
+  });
+  const painel = document.getElementById("resultado"), tempo = document.getElementById("tempo-total"), lista = document.getElementById("lista-caminho");
+  lista.replaceChildren(); painel.classList.remove("hidden"); camadaRota.clearLayers();
+  if (!Number.isFinite(resultado.tempoTotal)) {
+    tempo.textContent = "Não há rota disponível com as restrições selecionadas.";
+    return;
+  }
+  const modo = document.getElementById("modo-transporte").value;
+  const fatores = { metro: 1, carro: 1.2, moto: 0.8, onibus: 1.5, pe: 3.5 };
+  const tempoFinal = Math.round(resultado.tempoTotal * (fatores[modo] || 1));
+  const baldeacoes = resultado.caminho.filter((item, i) => i && item.linha !== resultado.caminho[i - 1].linha).length;
+  tempo.textContent = `⏱️ ${tempoFinal} min estimados | 📍 ${resultado.caminho.length} estações | 🔄 ${baldeacoes} baldeações` +
+    (document.getElementById("apenas-acessiveis").checked ? " | ⚠️ Não há dados suficientes para garantir acessibilidade total." : "");
+
+  resultado.caminho.forEach((item, i) => {
+    if (i && item.linha !== resultado.caminho[i - 1].linha) {
+      const li = document.createElement("li");
+      li.innerHTML = `<strong>🔄 Baldeação ${item.nomeBaldeacao ? `em ${item.nomeBaldeacao}` : `em ${item.estacao}`}: Linha ${item.linha} - ${item.nome}</strong>`;
+      li.style.color = "#d65a00"; lista.append(li);
+    }
+    const li = document.createElement("li");
+    li.textContent = `${item.estacao} — Linha ${item.linha} ${item.nome || ""}`;
+    li.style.color = item.cor || "#243b53"; lista.append(li);
+  });
+
+  const pontos = resultado.caminho.map(x => obterCoordenada(x.estacao));
+  // Desenha o pequeno deslocamento entre estações integradas com nomes diferentes,
+  // como Paulista (Linha 4) e Consolação (Linha 2).
+  resultado.caminho.forEach((item, i) => {
+    if (i === 0 || item.linha === resultado.caminho[i - 1].linha) return;
+    const anterior = obterCoordenada(resultado.caminho[i - 1].estacao);
+    const atual = pontos[i];
+    if (anterior && atual && resultado.caminho[i - 1].estacao !== item.estacao) {
+      L.polyline([anterior, atual], { color: "#ff7900", weight: 4, opacity: 0.9, dashArray: "5 6" }).addTo(camadaRota);
+    }
+  });
+  const trechos = [];
+  for (let i = 0; i < pontos.length; i++) {
+    if (!pontos[i]) continue;
+    if (trechos.length && resultado.caminho[i].linha !== resultado.caminho[i - 1]?.linha) {
+      // separa visualmente a mudança de linha sem apagar o trecho anterior
+      trechos.push({ coord: pontos[i], cor: resultado.caminho[i].cor, troca: true });
+    } else trechos.push({ coord: pontos[i], cor: resultado.caminho[i].cor, troca: false });
+  }
+  let grupo = [];
+  trechos.forEach((p, i) => {
+    if (p.troca && grupo.length > 1) { L.polyline(grupo, { color: trechos[i - 1].cor, weight: 7, opacity: 0.95 }).addTo(camadaRota); grupo = []; }
+    grupo.push(p.coord);
+    if (i === trechos.length - 1 || trechos[i + 1]?.troca) {
+      if (grupo.length > 1) L.polyline(grupo, { color: p.cor, weight: 7, opacity: 0.95 }).addTo(camadaRota);
+    }
+  });
+  resultado.caminho.forEach((item, i) => {
+    const p = obterCoordenada(item.estacao); if (!p) return;
+    const troca = i > 0 && item.linha !== resultado.caminho[i - 1].linha;
+    L.circleMarker(p, { radius: troca ? 9 : 6, color: troca ? "#ff7900" : item.cor, weight: 3, fillColor: "#fff", fillOpacity: 1 })
+      .bindTooltip(`${item.estacao}${troca ? " • BALDEAÇÃO" : ""}`).addTo(camadaRota);
+  });
+  const bounds = pontos.filter(Boolean);
+  if (bounds.length) mapaLeaflet.fitBounds(bounds, { padding: [35, 35] });
 }
 
-const resultado =
-    calcularRotaDijkstra(
-        grafoGlobal,
-        origem,
-        destino,
-        {
-            modoTempo,
-            linhasInterditadas
-        }
-    );
-
-    const divResultado = document.getElementById('resultado');
-    const divTempo = document.getElementById('tempo-total');
-    const listaCaminho = document.getElementById('lista-caminho');
-
-    listaCaminho.innerHTML = '';
-
-    if (resultado.tempoTotal === Infinity) {
-        divTempo.innerText = "Não há rota disponível entre essas estações.";
-    } else {
-        // Multiplicadores de velocidade por modo de transporte
-        const multiplicadores = {
-            metro: 1.0,
-            carro: 1.2,
-            moto: 0.8,
-            onibus: 1.5,
-            pe: 3.5
-        };
-
-        const fator = multiplicadores[modo] || 1.0;
-        const tempoFinal = Math.round(resultado.tempoTotal * fator);
-
-       const totalEstacoes =
-    resultado.caminho.length;
-
-const totalBaldeacoes =
-    resultado.caminho.filter(
-        item =>
-            item.tipo &&
-            item.tipo.toLowerCase() === "baldeacao"
-    ).length;
-
-divTempo.innerHTML = `
-⏱️ Tempo total estimado (${modo.toUpperCase()}): ${tempoFinal} minutos <br>
-📍 Estações percorridas: ${totalEstacoes}<br>
-🔄 Baldeações: ${totalBaldeacoes}
-`;
-
-      let ultimaLinha = null;
-
-resultado.caminho.forEach(item => {
-
-    // Mostrar baldeação
-    if (
-        item.tipo &&
-        item.tipo.toLowerCase() === "baldeacao"
-    ) {
-
-        const troca =
-            document.createElement("li");
-
-        troca.innerHTML =
-            "<strong>🔄 BALDEAÇÃO</strong>";
-
-        troca.style.color = "#ff6600";
-
-        troca.style.marginTop = "10px";
-
-        listaCaminho.appendChild(troca);
-    }
-
-    // Mostrar mudança de linha
-    if (
-        item.nomeLinha &&
-        item.nomeLinha !== ultimaLinha
-    ) {
-
-        const cabecalho =
-            document.createElement("li");
-
-        cabecalho.innerHTML =
-            `🚇 <strong>Linha ${item.nomeLinha}</strong>`;
-
-        cabecalho.style.color =
-            item.cor || "#000";
-
-        cabecalho.style.fontWeight =
-            "bold";
-
-        cabecalho.style.marginTop =
-            "8px";
-
-        listaCaminho.appendChild(cabecalho);
-
-        ultimaLinha =
-            item.nomeLinha;
-    }
-
-    const li =
-        document.createElement("li");
-
-    li.textContent =
-        item.estacao;
-
-    listaCaminho.appendChild(li);
-
-});
-    }
-
-    divResultado.classList.remove('hidden');
-});
-
-        const CORES_LINHAS = {
-            "1":"#0153a0",  //linha1- azul 
-            "3":"#ee372f", //linha3- vermelha
-            "5":"#9b3894",  //linha5- lilas
-            "10":"008a99#",   //linha10- turuquesa
-            "11":"#f68369", //linha11-coral
-            "Azul":"#0153a0",
-            "Vermelha":"#ee372f",
-            "Lilás":"#9b3894",
-            "Turquesa":"#008a99",
-            "Coral":"#f68369",
-        };
-
-        //função para obter a cor corresponde
-        function obterCorLinha (linha){
-            return CORES_LINHAS[linha] || "#666666"; //retorna cinza caso nao encontre
-
-        }
-            
-
-// Executa o carregamento inicial
+document.getElementById("btn-calcular").addEventListener("click", calcularEExibirRota);
 inicializarApp();
+
+
+
+// O painel inicia compacto e só abre os campos quando a pessoa inicia uma pesquisa.
+const painelPesquisa = document.querySelector(".container");
+const botaoAbrirPesquisa = document.getElementById("btn-abrir-pesquisa");
+const campoOrigem = document.getElementById("origem");
+
+function abrirPesquisa() {
+  painelPesquisa.classList.remove("compact", "panel-hidden");
+  window.setTimeout(() => {
+    if (campoOrigem) campoOrigem.focus();
+    if (mapaLeaflet) mapaLeaflet.invalidateSize();
+  }, 260);
+}
+
+botaoAbrirPesquisa.addEventListener("click", abrirPesquisa);
+
+// O botão de menu permite recolher o painel expandido e voltar ao cartão compacto.
+document.getElementById("btn-painel").addEventListener("click", () => {
+  if (painelPesquisa.classList.contains("panel-hidden")) {
+    painelPesquisa.classList.remove("panel-hidden");
+    painelPesquisa.classList.add("compact");
+  } else if (!painelPesquisa.classList.contains("compact")) {
+    painelPesquisa.classList.add("compact");
+  } else {
+    painelPesquisa.classList.add("panel-hidden");
+  }
+  window.setTimeout(() => mapaLeaflet && mapaLeaflet.invalidateSize(), 280);
+});
+
+// Ao tocar nos campos (inclusive em dispositivos móveis), mantém o painel expandido.
+[campoOrigem, document.getElementById("destino")].forEach(campo => {
+  campo.addEventListener("focus", () => painelPesquisa.classList.remove("compact"));
+});

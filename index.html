@@ -11,113 +11,128 @@
 </head>
 <body> 
 
-    <div class="container">
-        <h1>Metrô & Trem SP</h1>
-        <p>Selecione as estações para calcular a rota mais rápida:</p>
+    <div class="container compact">
+        <div class="panel-brand"><span class="brand-icon">🚇</span><div><h1>Metrô & Trem SP</h1><p>Encontre o melhor caminho pela rede</p></div></div>
+        <button id="btn-abrir-pesquisa" class="open-search" type="button"><span>⌕</span> Pesquisar estação</button>
+        
 
         <!-- Origem -->
         <div class="form-group">
             <label for="origem">Estação de Origem:</label>
-            <select id="origem"> 
-                <option value="">Carregando estações...</option>
-            </select>
+            <input id="origem" class="station-search" type="search"
+                   list="lista-estacoes-origem" placeholder="Pesquise a estação de origem..." autocomplete="off">
+            <datalist id="lista-estacoes-origem"></datalist>
         </div>
         
         <!-- Destino -->
         <div class="form-group">
             <label for="destino">Estação de Destino:</label>
-            <select id="destino">
-                <option value="">Carregando estações...</option>
-            </select>
+            <input id="destino" class="station-search" type="search"
+                   list="lista-estacoes-destino" placeholder="Pesquise a estação de destino..." autocomplete="off">
+            <datalist id="lista-estacoes-destino"></datalist>
         </div>
 
-        <!-- Modo de Deslocamento -->
-        <div class="form-group">
-            <label for="modo-transporte">Modo de Deslocamento:</label>
-            <select id="modo-transporte">
-                <option value="metro">🚇 Metrô / Trem</option>
-                <option value="carro">🚗 Carro</option>
-                <option value="moto">🏍️ Moto</option>
-                <option value="onibus">🚌 Ônibus</option>
-                <option value="pe">🚶 A pé</option>
-            </select>
-        </div>
+        <details class="advanced-options">
+            <summary>Mais opções de rota</summary>
+            <!-- Modo de Deslocamento -->
+            <div class="form-group">
+                <label for="modo-transporte">Modo de Deslocamento:</label>
+                <select id="modo-transporte">
+                    <option value="metro">🚇 Metrô / Trem</option>
+                    <option value="carro">🚗 Carro</option>
+                    <option value="moto">🏍️ Moto</option>
+                    <option value="onibus">🚌 Ônibus</option>
+                    <option value="pe">🚶 A pé</option>
+                </select>
+            </div>
 
-        <!-- Acessibilidade -->
-        <div class="form-group-checkbox">
-    <input type="checkbox" id="apenas-acessiveis">
-    <label for="apenas-acessiveis">
-        ♿ Apenas rotas 100% acessíveis
-    </label>
-</div>
+            <!-- Acessibilidade -->
+            <div class="form-group-checkbox">
+        <input type="checkbox" id="apenas-acessiveis">
+        <label for="apenas-acessiveis">
+            ♿ Apenas rotas 100% acessíveis
+        </label>
+    </div>
 
-<!-- Horário de pico -->
-<div class="form-group-checkbox">
-    <input type="checkbox" id="horario-pico">
-    <label for="horario-pico">
-        🕒 Horário de Pico
-    </label>
-</div>
+    <!-- Horário de pico -->
+    <div class="form-group-checkbox">
+        <input type="checkbox" id="horario-pico">
+        <label for="horario-pico">
+            🕒 Horário de Pico
+        </label>
+    </div>
 
-<!-- Chuva -->
-<div class="form-group-checkbox">
-    <input type="checkbox" id="chuva">
-    <label for="chuva">
-        🌧️ Chovendo
-    </label>
-</div>
+    <!-- Chuva -->
+    <div class="form-group-checkbox">
+        <input type="checkbox" id="chuva">
+        <label for="chuva">
+            🌧️ Chovendo
+        </label>
+    </div>
 
-<!-- NOVA PARTE -->
-<h3>🚧 Linhas Interditadas</h3>
-<h3>🚉 Estação Interditada</h3>
+    <!-- NOVA PARTE -->
+    <h3>🚧 Linhas Interditadas</h3>
+    <h3>🚉 Estação Interditada</h3>
 
-<select id="estacao-interditada">
-    <option value="">Nenhuma</option>
-</select>
+    <select id="estacao-interditada">
+        <option value="">Nenhuma</option>
+    </select>
 
-<div class="form-group-checkbox">
-    <input type="checkbox"
-           class="linha-interditada"
-           value="1">
-    <label>Linha 1 - Azul</label>
-</div>
+    <div class="form-group-checkbox">
+        <input type="checkbox"
+               class="linha-interditada"
+               value="1">
+        <label>Linha 1 - Azul</label>
+    </div>
 
-<div class="form-group-checkbox">
-    <input type="checkbox"
-           class="linha-interditada"
-           value="3">
-    <label>Linha 3 - Vermelha</label>
-</div>
+    <div class="form-group-checkbox">
+        <input type="checkbox"
+               class="linha-interditada"
+               value="3">
+        <label>Linha 3 - Vermelha</label>
+    </div>
 
-<div class="form-group-checkbox">
-    <input type="checkbox"
-           class="linha-interditada"
-           value="5">
-    <label>Linha 5 - Lilás</label>
-</div>
+    <div class="form-group-checkbox">
+        <input type="checkbox"
+               class="linha-interditada"
+               value="5">
+        <label>Linha 5 - Lilás</label>
+    </div>
 
-<div class="form-group-checkbox">
-    <input type="checkbox"
-           class="linha-interditada"
-           value="10">
-    <label>Linha 10 - Turquesa</label>
-</div>
+    <div class="form-group-checkbox">
+        <input type="checkbox"
+               class="linha-interditada"
+               value="10">
+        <label>Linha 10 - Turquesa</label>
+    </div>
 
-<div class="form-group-checkbox">
-    <input type="checkbox"
-           class="linha-interditada"
-           value="11">
-    <label>Linha 11 - Coral</label>
-</div>
+    <div class="form-group-checkbox">
+        <input type="checkbox"
+               class="linha-interditada"
+               value="11">
+        <label>Linha 11 - Coral</label>
+    </div>
 
-        <button id="btn-calcular">Calcular Rota</button>
+        </details>
+
+        <button id="btn-calcular">Encontrar rota</button>
 
         <!-- Resultado -->
         <div id="resultado" class="resultado-box hidden">
-            <h2>Itinerário Recomendado</h2>
+            <h2>Seu trajeto</h2>
             <div id="tempo-total" class="tempo"></div>
             <ol id="lista-caminho"></ol>
         </div>
+    </div>
+
+    <!-- Legenda do mapa -->
+    <button id="btn-painel" class="map-toggle" type="button" aria-label="Mostrar ou ocultar painel">☰</button>
+
+    <div class="legenda-mapa">
+        <strong>Mapa da rede</strong>
+        <span><i class="amostra rede"></i> Linhas principais</span>
+        <span><i class="amostra rota"></i> Percurso selecionado</span>
+        <span><i class="amostra baldeacao"></i> Ponto de baldeação</span>
     </div>
 
     <!-- Div para o Mapa -->
